@@ -16,6 +16,8 @@ build-images: build-processor-image build-query-node-image
 serve:
 	@npx squid-graphql-server --subscriptions
 
+migration:
+	@npx squid-typeorm-migration generate
 
 migrate:
 	@npx squid-typeorm-migration apply
@@ -26,7 +28,7 @@ codegen:
 
 
 typegen:
-	@npx squid-substrate-typegen typegen.json
+	@npx squid-substrate-typegen ./typegen/typegen.json
 
 
 up:
