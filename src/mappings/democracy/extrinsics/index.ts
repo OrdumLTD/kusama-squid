@@ -1,0 +1,1 @@
+export { handleVote } from './vote'
